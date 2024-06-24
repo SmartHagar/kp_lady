@@ -60,7 +60,7 @@ const ShowData = (props: Props) => {
             const srcPicture =
               item?.room_picture && item?.room_picture[0]
                 ? `${BASE_URL}/${item?.room_picture[0]?.picture}`
-                : "/images/rooms/Terminal12_1.JPG";
+                : "/images/no-image.png";
             const facilities = item?.room_facility;
             return (
               <div className="flex" key={item.id}>

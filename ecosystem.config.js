@@ -3,7 +3,7 @@
 module.exports = {
   apps: [
     {
-      name: "lady",
+      name: "kp_lady",
       script: "npm run start",
       autorestart: true,
       watch: false,

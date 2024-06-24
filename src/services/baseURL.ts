@@ -4,8 +4,8 @@ import axios from "axios";
 
 // api_yt=AIzaSyDSC8El1t0QceWqNzOdtHzxhwYAiJQt13A
 
-// const BASE_URL = "https://back-lady.ta-uogp.my.id";
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://back-kp.ledy-teurupun.my.id";
+// const BASE_URL = "http://127.0.0.1:8000";
 const url_auth = `${BASE_URL}/auth`;
 const url_api = `${BASE_URL}/api`;
 const url_crud = `${BASE_URL}/crud`;

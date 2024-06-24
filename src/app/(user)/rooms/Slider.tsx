@@ -20,12 +20,12 @@ const Slider: FC<Props> = ({ perView = 1 }) => {
 
   // Array berisi path gambar
   const imagePaths = [
-    "/images/rooms/Terminal12_1.JPG",
-    "/images/rooms/Terminal12_2.JPG",
-    "/images/rooms/Terminal12_3.JPG",
-    "/images/rooms/Terminal12_4.JPG",
-    "/images/rooms/Terminal12_5.JPG",
-    "/images/rooms/Terminal12_6.JPG",
+    "/images/rooms/Terminal12_1.jpg",
+    "/images/rooms/Terminal12_2.jpg",
+    "/images/rooms/Terminal12_3.jpg",
+    "/images/rooms/Terminal12_4.jpg",
+    "/images/rooms/Terminal12_5.jpg",
+    "/images/rooms/Terminal12_6.jpg",
   ];
 
   // Fungsi untuk mengacak urutan array
