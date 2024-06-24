@@ -7,31 +7,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: "https://smayppktarunadharmajayapura.sch.id",
+      url: "https://kp.ledy-teurupun.my.id",
       lastModified: currentDate,
       changeFrequency: "yearly",
       priority: 1,
     },
     // {
-    //   url: "https://smayppktarunadharmajayapura.sch.id/Kegiatan",
+    //   url: "https://kp.ledy-teurupun.my.id/Kegiatan",
     //   lastModified: currentDate,
     //   changeFrequency: "weekly",
     //   priority: 0.8,
     // },
     // {
-    //   url: "https://smayppktarunadharmajayapura.sch.id/berita",
+    //   url: "https://kp.ledy-teurupun.my.id/berita",
     //   lastModified: currentDate,
     //   changeFrequency: "weekly",
     //   priority: 0.5,
     // },
     // {
-    //   url: "https://smayppktarunadharmajayapura.sch.id/kontakKami",
+    //   url: "https://kp.ledy-teurupun.my.id/kontakKami",
     //   lastModified: currentDate,
     //   changeFrequency: "monthly",
     //   priority: 0.7,
     // },
     // {
-    //   url: "https://smayppktarunadharmajayapura.sch.id/fasilitas",
+    //   url: "https://kp.ledy-teurupun.my.id/fasilitas",
     //   lastModified: currentDate,
     //   changeFrequency: "monthly",
     //   priority: 0.7,
