@@ -1,6 +1,7 @@
 /** @format */
 
 import Location from "./Location";
+import Sosmed from "./Sosmed";
 
 type Props = {};
 
@@ -19,6 +20,7 @@ const Profil = (props: Props) => {
           bersantai. Pengunjung dapat menikmati berbagai aktivitas, seperti
           berenang dan berjemur.
         </p>
+        <Sosmed />
         <Location />
       </div>
     </main>
