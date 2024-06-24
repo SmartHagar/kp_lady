@@ -1,0 +1,152 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* add font lato */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* lato black */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* lato black italic */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* lato light */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* lato light italic */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* lato thin */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* lato thin italic */
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* add font oswald */
+@font-face {
+  font-family: "Oswald";
+  src: url("../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+
+/* add font Sacramento */
+@font-face {
+  font-family: "Sacramento";
+  src: url("../assets/fonts/Sacramento/Sacramento-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* add components */
+@layer components {
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .slide-down {
+    animation: slideDown 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: black;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
