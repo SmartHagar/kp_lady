@@ -34,9 +34,14 @@ const Form = (props: Props) => {
     const token = Cookies.get("token");
     if (token) {
       const cekAuth = await cekToken();
-      // console.log({ cekAuth });
-      if (!cekAuth?.error) {
+      console.log({ cekAuth });
+      if (!cekAuth) {
+        console.log("cekAuth", cekAuth);
         router.push(`/`);
+      }
+      if (cekAuth) {
+        console.log("Jadi", cekAuth);
+        router.push(`/roles/admin/dashboard`);
       }
     }
     setIsLoading(false);
