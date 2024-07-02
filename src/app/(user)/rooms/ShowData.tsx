@@ -1,5 +1,6 @@
 /** @format */
 "use client";
+import ModalDefault from "@/components/modal/ModalDefault";
 import { BASE_URL } from "@/services/baseURL";
 import showRupiah from "@/services/rupiah";
 import useRoomTypesApi from "@/stores/api/RoomTypes";
@@ -7,12 +8,15 @@ import useRoomsApi from "@/stores/api/Rooms";
 import RoomsTypes from "@/types/RoomsTypes";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import Pictures from "./Pictures";
 
 type Props = {};
 
 const ShowData = (props: Props) => {
   // state room_type_id
   const [roomTypeId, setRoomTypeId] = useState<number | string>("");
+  const [roomId, setRoomId] = useState<number | string>("");
+  const [showModal, setShowModal] = useState(false);
   // store
   const { setRoomsAll, dtRooms } = useRoomsApi();
   const { setRoomTypesAll, dtRoomTypes } = useRoomTypesApi();
@@ -25,9 +29,13 @@ const ShowData = (props: Props) => {
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, [fetchData, roomTypeId]);
 
-  console.log({ dtRooms });
+  const handleBtn = (room_id: string | number) => {
+    setRoomId(room_id);
+    setShowModal(true);
+    return;
+  };
 
   return (
     <div className="flex flex-col grow mb-10 gap-y-6">
@@ -101,7 +109,10 @@ const ShowData = (props: Props) => {
                       </p>
                     </div>
                     <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased"></p>
-                    <a className="inline-block" href="#">
+                    <div
+                      className="inline-block"
+                      onClick={() => handleBtn(item.id)}
+                    >
                       <button
                         className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-primary transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"
@@ -123,13 +134,21 @@ const ShowData = (props: Props) => {
                           ></path>
                         </svg>
                       </button>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
       </div>
+      <ModalDefault
+        title="Gambar Ruangan"
+        showModal={showModal}
+        setShowModal={setShowModal}
+        width="800px"
+      >
+        <Pictures room_id={roomId} />
+      </ModalDefault>
     </div>
   );
 };

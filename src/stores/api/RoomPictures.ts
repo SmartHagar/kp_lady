@@ -27,6 +27,11 @@ type Store = {
     data?: {};
     error?: {};
   }>;
+  setByRoomId: (id: string | number) => Promise<{
+    status: string;
+    data?: {};
+    error?: {};
+  }>;
 };
 
 const useRoomPicturesApi = create(
@@ -69,6 +74,24 @@ const useRoomPicturesApi = create(
           },
         });
         set((state) => ({ ...state, dtAllRoomPictures: response.data }));
+        return {
+          status: "berhasil",
+          data: response.data,
+        };
+      } catch (error: any) {
+        return {
+          status: "error",
+          error: error.response.data,
+        };
+      }
+    },
+    setByRoomId: async (id) => {
+      try {
+        const response = await api({
+          method: "get",
+          url: `/roomPictures/byRoomId/${id}`,
+        });
+        set((state) => ({ ...state, dtRoomPictures: response.data }));
         return {
           status: "berhasil",
           data: response.data,
