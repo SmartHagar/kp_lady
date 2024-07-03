@@ -76,7 +76,7 @@ const BodyForm: FC<Props> = ({
         register={register}
         required
         min={1}
-        max={3}
+        max={100}
         type="number"
         valueAsNumber
         errors={errors.quantity}
